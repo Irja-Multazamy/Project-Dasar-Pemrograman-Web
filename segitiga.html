@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Bangun Datar Segitiga</title>
+		<style>
+		.border{
+			width: 40%; 
+			height: 360px; 
+			border: solid;
+			border-color : aqua;
+			margin: 15px; 
+			padding: 3px; 
+			background: rgba(0,255,254,0.2);
+		}
+		.kanan{
+			float: right;
+		}
+		.kiri{
+			float: left;
+		}
+		.size{
+			width: 200px;
+		}
+		</style>
+	</head>
+	
+	<body background="Bg1.jpg">
+		<center>
+			<h1>Segitiga</h1>
+			
+			<div>
+				<img src="segitiga.jpg" width="200" height="200">
+			</div>
+			
+			<div class="border">
+				<div>
+					<h2> Mencari Luas dan Keliling Segitiga </h2>
+				</div>
+				<div>
+					<h4><label for="satuan">Satuan Panjang</label></h4>
+					<select id="satuan" name="satuan">
+						<option>Pilih</option>
+						<option value="km">Km</option>
+						<option value="hm">Hm</option>
+						<option value="dam">Dam</option>
+						<option value="m">M</option>
+						<option value="dm">Dm</option>
+						<option value="cm">Cm</option>
+						<option value="mm">Mm</option>
+					</select>
+				</div><br>
+				<div class="kiri">
+					<h4> Keliling Segitiga </h4>
+					<p> Keliling = sisi 1 + sisi 2 + sisi 3 </p>
+					<h5> Masukkan Panjang Sisi Segitiga</h5>
+					<div class="size">
+						<input type="text" id="input_sisi1" placeholder="sisi_1">
+						<input type="text" id="input_sisi2" placeholder="sisi_2">
+						<input type="text" id="input_sisi3" placeholder="sisi_3">
+					</div><br>
+					<input type="text" id="hasil_keliling" disabled>
+				</div><br>
+				<div class="kanan">
+					<h4> Luas Segitiga</h4>
+					<p> Luas = 1/2 x alas x tinggi </p>
+					<h5> Masukkan Tinggi dan Alas Segitiga</h5>
+					<div class="size">
+						<input type="text" id="input_tinggi" placeholder="tinggi">
+						<input type="text" id="input_alas" placeholder="alas">
+					</div><br>
+					<input type="text" id="hasil_luas" disabled>
+				</div><br>
+				<div>
+					<button onclick="hitung()">Hitung</button>
+				</div>
+			</div>
+		</center>
+		<script>
+			var luas;
+			var keliling;
+			var tinggi;
+			var alas;
+			var sisi;
+			function hitung() {
+				sisi1 = parseFloat(document.getElementById("input_sisi1").value);
+				sisi2 = parseFloat(document.getElementById("input_sisi2").value);
+				sisi3 = parseFloat(document.getElementById("input_sisi3").value);
+				tinggi = parseFloat(document.getElementById("input_tinggi").value);
+				alas = parseFloat(document.getElementById("input_alas").value);
+				keliling = sisi1 + sisi2 + sisi3;
+				luas = 1/2 * alas * tinggi;
+				document.getElementById('hasil_keliling').value = keliling;
+				document.getElementById('hasil_luas').value = luas;
+			}
+		</script>
+	</body>
+</html>
