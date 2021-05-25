@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Bangun Datar Persegi </title>
+		<style>
+		.border{
+			width: 40%; 
+			height: 400px; 
+			border: solid;
+			border-color : aqua;
+			margin: 15px; 
+			padding: 3px; 
+			background: rgba(0,255,254,0.2);
+		}
+		.kanan{
+			float: right;
+		}
+		.kiri{
+			float: left;
+		}
+		</style>
+	</head>
+	
+	<body background="Bg1.jpg">
+		<center>
+			<h1>Persegi</h1>
+			
+			<div>
+				<img src="persegi.jpg" width="200" height="200">
+			</div>
+			
+			<div class="border">
+					<div>
+						<h2> Mencari Luas dan Keliling Persegi </h2>
+						<h4> Masukkan Panjang Sisi Persegi </h4>
+						<input type="text" id="input_sisi">
+					</div>
+					<div>
+						<h4><label for="satuan">Satuan Panjang</label></h4>
+						<select id="satuan" name="satuan">
+							<option>Pilih</option>
+							<option value="km">Km</option>
+							<option value="hm">Hm</option>
+							<option value="dam">Dam</option>
+							<option value="m">M</option>
+							<option value="dm">Dm</option>
+							<option value="cm">Cm</option>
+							<option value="mm">Mm</option>
+						</select>
+					</div><br>
+					<div>
+						<button onclick="hitung()">Hitung</button>
+					</div>
+					<div class="kiri">
+						<h4> Keliling Persegi </h4>
+						<p> Keliling = 4 x sisi </p>
+						<input type="text" id="hasil_keliling" disabled>
+					</div>
+					<div class="kanan">
+						<h4> Luas Persegi </h4>
+						<p> Luas = sisi x sisi </p>
+						<input type="text" id="hasil_luas" disabled>
+					</div>
+			</div>
+		</center>
+		<script>
+			var luas;
+			var keliling;
+			var sisi;
+			function hitung() {
+				sisi = parseFloat(document.getElementById("input_sisi").value);
+				keliling = sisi * 4;
+				luas = sisi * sisi;
+				document.getElementById('hasil_keliling').value = keliling;
+				document.getElementById('hasil_luas').value = luas;
+			}
+		</script>
+	</body>
+</html>
