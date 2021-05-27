@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Bangun Datar Lingkaran </title>
+		<style>
+		.border{
+			width: 40%; 
+			height: 400px; 
+			border: solid;
+			border-color : aqua;
+			margin: 15px; 
+			padding: 3px; 
+			background: rgba(0,255,254,0.2);
+		}
+		.kanan{
+			float: right;
+		}
+		.kiri{
+			float: left;
+		}
+		</style>
+	</head>
+	
+	<body background="bg1.jpg">
+		<center>
+			<h1>Lingkaran</h1>
+			
+			<div>
+				<img src="lingkaran.jpg" width="200" height="200">
+			</div>
+			
+			<div class="border">
+					<div>
+						<h2> Mencari Luas dan Keliling Lingkaran </h2>
+						<h4> Masukkan Panjang Jari-Jari Lingkaran </h4>
+						<p> Jari-jari = 1/2 Diameter </p>
+						<input type="text" id="input_jari">
+					</div>
+					<div>
+						<h4><label for="satuan">Satuan Panjang</label></h4>
+						<select id="satuan" name="satuan">
+							<option>Pilih</option>
+							<option value="km">Km</option>
+							<option value="hm">Hm</option>
+							<option value="dam">Dam</option>
+							<option value="m">M</option>
+							<option value="dm">Dm</option>
+							<option value="cm">Cm</option>
+							<option value="mm">Mm</option>
+						</select>
+					</div><br>
+					<div>
+						<button onclick="hitung()">Hitung</button>
+					</div>
+					<div class="kiri">
+						<h4> Keliling Lingkaran </h4>
+						<p> Keliling = 2 x π x jari-jari (r) </p>
+						<input type="text" id="hasil_keliling" disabled>
+					</div>
+					<div class="kanan">
+						<h4> Luas lingkaran </h4>
+						<p> Luas = π x jari-jari (r) x jari-jari (r) </p>
+						<input type="text" id="hasil_luas" disabled>
+					</div>
+			</div>
+		</center>
+		<script>
+			var luas;
+			var keliling;
+			var jari;
+			function hitung() {
+				jari = parseFloat(document.getElementById("input_jari").value);
+				keliling = 2 * 3.14 * jari;
+				luas = 3.14 * jari * jari;
+				document.getElementById('hasil_keliling').value = keliling;
+				document.getElementById('hasil_luas').value = luas;
+			}
+		</script>
+	</body>
+</html>
