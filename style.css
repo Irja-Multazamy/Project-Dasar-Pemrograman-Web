@@ -1,0 +1,81 @@
+body {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.loginbox{
+	width: 320px;
+	height: 420px;
+	background: black;
+	color: white;
+	top: 50%;
+	left: 50%;
+	position: absolute;
+	transform: translate(-50%,-50%);
+	box-sizing: border-box;
+	padding: 60px 30px;
+}
+
+.icon{
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	position: absolute;
+	top: -50px;
+	left: calc(50% - 50px);
+}
+
+h1 {
+	margin: 0;
+	padding: 0 0 20px;
+	text-align: center;
+	font-size: 22px;
+}
+
+.loginbox p {
+	margin: 0;
+	padding: 0;
+	font-weight: bold;
+}
+
+.loginbox input {
+	width: 250px;
+	margin-bottom: 20px;
+}
+
+.loginbox input[type="text"]{
+	border: none;
+	border-bottom: 1px solid #fff;
+	background: transparent;
+	outline: none;
+	height: 40px;
+	color: white;
+}
+
+select {
+	border: none;
+	border-bottom: 1px solid #fff;
+	background-color: black;
+	height: 40px;
+	width: 253px;
+	color: white;
+	margin-bottom: 20px;
+}
+
+.loginbox input[type="button"]{
+	border: none;
+	outline: none;
+	height: 40px;
+	background: red;
+	color: white;
+	font-size: 18px;
+	border-radius: 20px;
+}
+
+.loginbox input[type="button"]:hover {
+	cursor: pointer;
+	background: maroon;
+	color: white;
+	font-weight: bold;
+}
