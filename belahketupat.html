@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Bangun Datar Belah Keliling</title>
+		<style>
+		.border{
+			width: 40%; 
+			height: 360px; 
+			border: solid;
+			border-color : aqua;
+			margin: 15px; 
+			padding: 3px; 
+			background: rgba(0,255,254,0.2);
+		}
+		.kanan{
+			float: right;
+		}
+		.kiri{
+			float: left;
+		}
+		.size{
+			width: 200px;
+		}
+		</style>
+	</head>
+	
+	<body background="bg1.jpg">
+		<center>
+			<h1>Belah Ketupat</h1>
+			
+			<div>
+				<img src="belahketupat.jpg" width="200" height="200">
+			</div>
+			
+			<div class="border">
+				<div>
+					<h2> Mencari Luas dan Keliling Belah Ketupat </h2>
+				</div>
+				<div>
+					<h4><label for="satuan">Satuan Panjang</label></h4>
+					<select id="satuan" name="satuan">
+						<option>Pilih</option>
+						<option value="km">Km</option>
+						<option value="hm">Hm</option>
+						<option value="dam">Dam</option>
+						<option value="m">M</option>
+						<option value="dm">Dm</option>
+						<option value="cm">Cm</option>
+						<option value="mm">Mm</option>
+					</select>
+				</div>
+				<div class="kiri">
+					<h4> Keliling Belah Ketupat </h4>
+					<p> Keliling = 4 x sisi </p>
+					<h5> Masukkan Panjang Sisi Belah Ketupat</h5>
+					<div class="size">
+						<input type="text" id="input_sisi" placeholder="panjang_sisi">
+					</div><br>
+					<input type="text" id="hasil_keliling" disabled>
+				</div>
+				<div class="kanan">
+					<h4> Luas Belah Ketupat</h4>
+					<p> Luas = 1/2 x diagonal 1 x diagonal 2 </p>
+					<h5> Masukkan Diagonal Belah Ketupat</h5>
+					<div class="size">
+						<input type="text" id="input_diagonal1" placeholder="diagonal_1">
+						<input type="text" id="input_diagonal2" placeholder="diagonal_2">
+					</div><br>
+					<input type="text" id="hasil_luas" disabled>
+				</div><br>
+				<div>
+					<button onclick="hitung()">Hitung</button>
+				</div>
+			</div>
+		</center>
+		<script>
+			var luas;
+			var keliling;
+			var sisi;
+			var diagonal_1;
+			var diagonal_2;
+			function hitung() {
+				sisi = parseFloat(document.getElementById("input_sisi").value);
+				diagonal_1 = parseFloat(document.getElementById("input_diagonal1").value);
+				diagonal_2 = parseFloat(document.getElementById("input_diagonal2").value);
+				keliling = 4 * sisi;
+				luas = 1/2 * diagonal_1 * diagonal_2;
+				document.getElementById('hasil_keliling').value = keliling;
+				document.getElementById('hasil_luas').value = luas;
+			}
+		</script>
+	</body>
+</html>
