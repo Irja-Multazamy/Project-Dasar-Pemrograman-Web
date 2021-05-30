@@ -2,7 +2,11 @@
 <html>
 
 	<head>
-		<title> Bangun Datar Persegi Panjang</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+		<title>KALKULATOR BANGUN DATAR</title>
+		<link rel="icon" href="ASSET/icon.png">
+		<link rel="stylesheet" type="text/css" href="style_ku.css">
 		<style>
 		.border{
 			width: 40%; 
@@ -18,7 +22,11 @@
 		}
 		.kiri{
 			float: left;
-		}		
+		}
+		h1 {
+			text-align: center;
+			padding-right: 300px;
+		}
 		</style>
 	</head>
 	
@@ -33,13 +41,13 @@
 			<div class="border">
 				<div>
 					<h2> Mencari Luas dan Keliling Persegi Panjang </h2>
-					<h4> Masukkan Panjang Sisi Persegi Panjang </h4>
+					<p> Masukkan Panjang Sisi Persegi Panjang </p>
 					<input type="text" id="input_panjang">
-					<h4> Masukkan Lebar Sisi Persegi Panjang </h4>
+					<p> Masukkan Lebar Sisi Persegi Panjang </p>
 					<input type="text" id="input_lebar">
 				<div>
 				<div>
-					<h4><label for="satuan">Satuan Panjang</label></h4>
+					<h6><label for="satuan">Satuan Panjang</label></h6>
 					<select id="satuan" name="satuan">
 						<option>Pilih</option>
 						<option value="km">Km</option>
@@ -55,12 +63,12 @@
 					<button onclick="hitung()">Hitung</button>
 				</div>
 				<div class="kiri">
-					<h4> Keliling Persegi Panjang </h4>
+					<h5> Keliling Persegi Panjang </h5>
 					<p> Keliling = 2 x (panjang + lebar) </p>
 					<input type="text" id="hasil_keliling" disabled>
 				</div>
 				<div class="kanan">
-					<h4> Luas Persegi Panjang</h4>
+					<h5> Luas Persegi Panjang</h5>
 					<p> Luas = panjang x lebar </p>
 					<input type="text" id="hasil_luas" disabled>
 				</div>
