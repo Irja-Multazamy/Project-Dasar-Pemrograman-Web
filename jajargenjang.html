@@ -2,7 +2,11 @@
 <html>
 
 	<head>
-		<title> Bangun Datar Jajar Genjang</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+		<title>KALKULATOR BANGUN DATAR</title>
+		<link rel="icon" href="ASSET/icon.png">
+		<link rel="stylesheet" type="text/css" href="style_ku.css">
 		<style>
 		.border{
 			width: 40%; 
@@ -18,11 +22,40 @@
 		}
 		.kiri{
 			float: left;
-		}		
+		}
+		h1 {
+			text-align: center;
+			padding-right: 300px;
+		}
 		</style>
 	</head>
 	
 	<body background="ASSET/bg1.jpg">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<div class="navbar-brand">
+					<img src="ASSET/icon.png" style="width: 50px; height:50px">
+				</div>
+				<div class="navbar-brand">KALKULATOR BANGUN DATAR</div>
+				<div class="collapse navbar-collapse">
+				  <ul class="navbar-nav">
+					<li class="nav-item">
+					  <a class="nav-link active" href="login.html">Login</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link active" href="indeks.html">Home</a>
+					</li>   
+					<li class="nav-item">
+					  <a class="nav-link active" href="Profile.html">Profile</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link active" href="kalkulator.html">Kalkulator</a>
+					</li>
+				  </ul>
+				</div>
+			</div>
+		  </nav>
+		
 		<center>
 			<h1>Jajar Genjang</h1>
 			
@@ -33,15 +66,15 @@
 			<div class="border">
 				<div>
 					<h2> Mencari Luas dan Keliling Jajar Genjang </h2>
-					<h4> Masukkan Panjang Sisi Miring Jajar Genjang </h4>
+					<p> Masukkan Panjang Sisi Miring Jajar Genjang </p>
 					<input type="text" id="input_sisi-miring">
-					<h4> Masukkan Panjang Alas Jajar Genjang </h4>
+					<p> Masukkan Panjang Alas Jajar Genjang </p>
 					<input type="text" id="input_alas">
-					<h4> Masukkan Tinggi Jajar Genjang </h4>
+					<p> Masukkan Tinggi Jajar Genjang </p>
 					<input type="text" id="input_tinggi">
 				<div>
 				<div>
-					<h4><label for="satuan">Satuan Panjang</label></h4>
+					<h6><label for="satuan">Satuan Panjang</label></h6>
 					<select id="satuan" name="satuan">
 						<option>Pilih</option>
 						<option value="km">Km</option>
@@ -57,12 +90,12 @@
 					<button onclick="hitung()">Hitung</button>
 				</div>
 				<div class="kiri">
-					<h4> Keliling Jajar Genjang </h4>
+					<h5> Keliling Jajar Genjang </h5>
 					<p> Keliling = 2 x (sisi miring (b) + alas (a)) </p>
 					<input type="text" id="hasil_keliling" disabled>
 				</div>
 				<div class="kanan">
-					<h4> Luas Jajar Genjang</h4>
+					<h5> Luas Jajar Genjang</h5>
 					<p> Luas = alas x tinggi </p>
 					<input type="text" id="hasil_luas" disabled>
 				</div>
