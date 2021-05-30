@@ -2,7 +2,11 @@
 <html>
 
 	<head>
-		<title> Bangun Datar Belah Keliling</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+		<title>KALKULATOR BANGUN DATAR</title>
+		<link rel="icon" href="ASSET/icon.png">
+		<link rel="stylesheet" type="text/css" href="style_ku.css">
 		<style>
 		.border{
 			width: 40%; 
@@ -22,10 +26,39 @@
 		.size{
 			width: 200px;
 		}
+		h1 {
+			text-align: center;
+			padding-right: 300px;
+		}
 		</style>
 	</head>
 	
 	<body background="ASSET/bg1.jpg">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<div class="navbar-brand">
+					<img src="ASSET/icon.png" style="width: 50px; height:50px">
+				</div>
+				<div class="navbar-brand">KALKULATOR BANGUN DATAR</div>
+				<div class="collapse navbar-collapse">
+				  <ul class="navbar-nav">
+					<li class="nav-item">
+					  <a class="nav-link active" href="login.html">Login</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link active" href="indeks.html">Home</a>
+					</li>   
+					<li class="nav-item">
+					  <a class="nav-link active" href="Profile.html">Profile</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link active" href="kalkulator.html">Kalkulator</a>
+					</li>
+				  </ul>
+				</div>
+			</div>
+		  </nav>
+		
 		<center>
 			<h1>Belah Ketupat</h1>
 			
@@ -38,7 +71,7 @@
 					<h2> Mencari Luas dan Keliling Belah Ketupat </h2>
 				</div>
 				<div>
-					<h4><label for="satuan">Satuan Panjang</label></h4>
+					<h6><label for="satuan">Satuan Panjang</label></h6>
 					<select id="satuan" name="satuan">
 						<option>Pilih</option>
 						<option value="km">Km</option>
@@ -49,28 +82,28 @@
 						<option value="cm">Cm</option>
 						<option value="mm">Mm</option>
 					</select>
+				</div><br>
+				<div>
+					<button onclick="hitung()">Hitung</button>
 				</div>
 				<div class="kiri">
-					<h4> Keliling Belah Ketupat </h4>
+					<h5> Keliling Belah Ketupat </h5>
 					<p> Keliling = 4 x sisi </p>
-					<h5> Masukkan Panjang Sisi Belah Ketupat</h5>
+					<p> Masukkan Panjang Sisi Belah Ketupat</p>
 					<div class="size">
 						<input type="text" id="input_sisi" placeholder="panjang_sisi">
 					</div><br>
 					<input type="text" id="hasil_keliling" disabled>
 				</div>
 				<div class="kanan">
-					<h4> Luas Belah Ketupat</h4>
+					<h5> Luas Belah Ketupat</h5>
 					<p> Luas = 1/2 x diagonal 1 x diagonal 2 </p>
-					<h5> Masukkan Diagonal Belah Ketupat</h5>
+					<p> Masukkan Diagonal Belah Ketupat </p>
 					<div class="size">
 						<input type="text" id="input_diagonal1" placeholder="diagonal_1">
 						<input type="text" id="input_diagonal2" placeholder="diagonal_2">
 					</div><br>
 					<input type="text" id="hasil_luas" disabled>
-				</div><br>
-				<div>
-					<button onclick="hitung()">Hitung</button>
 				</div>
 			</div>
 		</center>
