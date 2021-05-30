@@ -2,11 +2,15 @@
 <html>
 
 	<head>
-		<title> Bangun Datar Trapesium</title>
+		<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x" crossorigin="anonymous">
+		<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" crossorigin="anonymous"></script>
+		<title>KALKULATOR BANGUN DATAR</title>
+		<link rel="icon" href="ASSET/icon.png">
+		<link rel="stylesheet" type="text/css" href="style_ku.css">
 		<style>
 		.border{
 			width: 40%; 
-			height: 430px; 
+			height: 450px; 
 			border: solid;
 			border-color : aqua;
 			margin: 15px; 
@@ -22,10 +26,39 @@
 		.size{
 			width: 200px;
 		}
+		h1 {
+			text-align: center;
+			padding-right: 300px;
+		}
 		</style>
 	</head>
 	
 	<body background="ASSET/bg1.jpg">
+		<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+			<div class="container-fluid">
+				<div class="navbar-brand">
+					<img src="ASSET/icon.png" style="width: 50px; height:50px">
+				</div>
+				<div class="navbar-brand">KALKULATOR BANGUN DATAR</div>
+				<div class="collapse navbar-collapse">
+				  <ul class="navbar-nav">
+					<li class="nav-item">
+					  <a class="nav-link active" href="login.html">Login</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link active" href="indeks.html">Home</a>
+					</li>   
+					<li class="nav-item">
+					  <a class="nav-link active" href="Profile.html">Profile</a>
+					</li>
+					<li class="nav-item">
+					  <a class="nav-link active" href="kalkulator.html">Kalkulator</a>
+					</li>
+				  </ul>
+				</div>
+			</div>
+		  </nav>
+		
 		<center>
 			<h1>Trapesium</h1>
 			
@@ -38,7 +71,7 @@
 					<h2> Mencari Luas dan Keliling Trapesium </h2>
 				</div>
 				<div>
-					<h4><label for="satuan">Satuan Panjang</label></h4>
+					<h6><label for="satuan">Satuan Panjang</label></h6>
 					<select id="satuan" name="satuan">
 						<option>Pilih</option>
 						<option value="km">Km</option>
@@ -54,9 +87,9 @@
 					<button onclick="hitung()">Hitung</button>
 				</div>
 				<div class="kiri">
-					<h4> Keliling Trapesium </h4>
+					<h5> Keliling Trapesium </h5>
 					<p> Keliling = jumlah panjang sisi</p>
-					<h5> Masukkan Panjang Sisi Trapesium</h5>
+					<p> Masukkan Panjang Sisi Trapesium</p>
 					<div class="size">
 						<input type="text" id="input_sisi1" placeholder="sisi_a">
 						<input type="text" id="input_sisi2" placeholder="sisi_b">
@@ -66,9 +99,9 @@
 					<input type="text" id="hasil_keliling" disabled>
 				</div>
 				<div class="kanan">
-					<h4> Luas Trapesium</h4>
+					<h5> Luas Trapesium</h5>
 					<p> Luas = 1/2 x jumlah sisi sejajar (a+b) x tinggi </p>
-					<h5> Masukkan Sisi Sejajar dan Tinggi Trapesium</h5>
+					<p> Masukkan Sisi Sejajar dan Tinggi Trapesium</p>
 					<div class="size">
 						<input type="text" id="input_tinggi" placeholder="tinggi">
 						<input type="text" id="input_sisi_sejajar_1" placeholder="sisi_sejajar_a">
