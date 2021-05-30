@@ -1,6 +1,5 @@
 body{
-    background: url(ASET/bg1.jpg);
-    background-size: 1400px;
+    background: url(ASSET/bg1.jpg);
 }
 
 nav ul li a:hover{
@@ -13,17 +12,18 @@ div.gallery {
     border: 1px solid #ccc;
     float: left;
     width: 180px;
+    height: 200px;
+    background-color: aliceblue;
 }
 
 div.gallery:hover {
   border: 4px solid #777;
-  margin-left: auto;
-  margin-right: auto;
 }
 
 div.gallery img {
+    align-items: center;
     width: 100%;
-    height: auto;
+    height: 150px;
     margin-left: auto;
     margin-right: auto;
 }
@@ -31,9 +31,11 @@ div.gallery img {
 div.desc {
   padding: 15px;
   text-align: center;
+  background-color: aliceblue;  
 }
 
 .container{
+    width: auto;
     float: right;
 }
 
