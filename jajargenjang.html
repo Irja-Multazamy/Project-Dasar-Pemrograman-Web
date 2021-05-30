@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<title> Bangun Datar Jajar Genjang</title>
+		<style>
+		.border{
+			width: 40%; 
+			height: 530px; 
+			border: solid;
+			border-color : aqua;
+			margin: 15px; 
+			padding: 3px; 
+			background: rgba(0,255,254,0.2);
+		}
+		.kanan{
+			float: right;
+		}
+		.kiri{
+			float: left;
+		}		
+		</style>
+	</head>
+	
+	<body background="bg1.jpg">
+		<center>
+			<h1>Jajar Genjang</h1>
+			
+			<div>
+				<img src="jajargenjang.jpg" width="200" height="200">
+			</div>
+			
+			<div class="border">
+				<div>
+					<h2> Mencari Luas dan Keliling Jajar Genjang </h2>
+					<h4> Masukkan Panjang Sisi Miring Jajar Genjang </h4>
+					<input type="text" id="input_sisi-miring">
+					<h4> Masukkan Panjang Alas Jajar Genjang </h4>
+					<input type="text" id="input_alas">
+					<h4> Masukkan Tinggi Jajar Genjang </h4>
+					<input type="text" id="input_tinggi">
+				<div>
+				<div>
+					<h4><label for="satuan">Satuan Panjang</label></h4>
+					<select id="satuan" name="satuan">
+						<option>Pilih</option>
+						<option value="km">Km</option>
+						<option value="hm">Hm</option>
+						<option value="dam">Dam</option>
+						<option value="m">M</option>
+						<option value="dm">Dm</option>
+						<option value="cm">Cm</option>
+						<option value="mm">Mm</option>
+					</select>
+				</div><br>
+				<div>
+					<button onclick="hitung()">Hitung</button>
+				</div>
+				<div class="kiri">
+					<h4> Keliling Jajar Genjang </h4>
+					<p> Keliling = 2 x (sisi miring (b) + alas (a)) </p>
+					<input type="text" id="hasil_keliling" disabled>
+				</div>
+				<div class="kanan">
+					<h4> Luas Jajar Genjang</h4>
+					<p> Luas = alas x tinggi </p>
+					<input type="text" id="hasil_luas" disabled>
+				</div>
+			</div>
+		</center>
+		<script>
+			var luas;
+			var keliling;
+			var sisi_miring;
+			var alas;
+			var tinggi;
+			function hitung() {
+				sisi_miring = parseFloat(document.getElementById("input_sisi-miring").value);
+				alas = parseFloat(document.getElementById("input_alas").value);
+				tinggi = parseFloat(document.getElementById("input_tinggi").value);
+				keliling = 2 * ( sisi_miring + alas );
+				luas = alas * tinggi;
+				document.getElementById('hasil_keliling').value = keliling;
+				document.getElementById('hasil_luas').value = luas;
+			}
+		</script>
+	</body>
+</html>
