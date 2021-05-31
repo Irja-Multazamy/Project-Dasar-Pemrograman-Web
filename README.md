@@ -2,19 +2,22 @@
 Project 2 Dasar Pemrograman Web "PROJECT KALKULATOR BANGUN DATAR"
 
 Login => Halaman Utama ( berbentuk Navbar )
--	Home
-Berisi ciri-ciri dan gambar dari setiap bangun datar
--	Icon persegi
--	Icon persegi panjang
--	Icon segitiga
--	Icon lingkaran
--	Icon jajar genjang
--	Icon trapesium
--	Icon belah ketupat
--	Profil
-Berisi profil beserta foto dari anggota kelompok
+# Login
+# Home
+  berisi gallery bangun datar dan link menuju penjelasan ciri-ciri dari setiap bangun datar
+      - persegi
+      - persegi panjang
+      - segitiga 
+      - lingkaran
+      - jajar genjang
+      - trapesium
+      - belah ketupat
+# Profile
+  Berisi profil beserta foto dari anggota kelompok
+# Kalkulator
+  Berisi gallery bangun datar beserta link untuk menuju ke halaman perhitungan
 
-Nb: Setiap klik icon masing-masing bangun datar akan menuju ke halaman perhitungan mencari luas dan keliling dari setiap bangun datar.
+
 
 Anggota Kelompok :
 -	Ahlaqul Karimah (200411100008)
